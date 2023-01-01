@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "byCedric.vscode-expo",
+    "wix.vscode-import-cost",
+    "xyz.local-history",
+    "streetsidesoftware.code-spell-checker",
+    "naumovs.color-highlight",
+    "vincaslt.highlight-matching-tag"
+  ]
+}
