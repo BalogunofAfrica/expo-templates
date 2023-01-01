@@ -1,0 +1,8 @@
+{
+  "screen.one": {
+    "welcome": "Bonjour, bienvenue sur le premier écran :)"
+  },
+  "screen.two": {
+    "welcome": "Bonjour, bienvenue sur le deuxième écran :)"
+  }
+}
