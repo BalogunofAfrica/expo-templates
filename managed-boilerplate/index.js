@@ -1,9 +1,10 @@
+import "intl-pluralrules";
 import { enableLegendStateReact } from "@legendapp/state/react";
 import { LogBox } from "react-native";
 import registerRootComponent from "expo/build/launch/registerRootComponent";
 
-import { App } from "./app/app";
 import "./app/i18n";
+import { App } from "./app/app";
 
 enableLegendStateReact();
 
