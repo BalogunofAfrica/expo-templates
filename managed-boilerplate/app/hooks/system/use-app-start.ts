@@ -1,7 +1,7 @@
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect, useState } from "react";
 
-import { loadFont } from "@/theme";
+import { loadFont } from "@/theme/load-fonts";
 import { logger } from "@/utils/functions";
 
 export function useAppStart() {
