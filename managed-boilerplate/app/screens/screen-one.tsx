@@ -7,12 +7,14 @@ import { Button } from "@/components/button";
 export function ScreenOne() {
   const { t } = useTranslation();
   const { navigate } = useNavigation();
+
   return (
     <Screen justifyContent="center" paddingHorizontal="m">
       <Text marginBottom="m" textAlign="center">
         {t("screen.one.welcome")}
       </Text>
       <Button
+        backgroundColor="error"
         label="Go to next"
         onPress={() => {
           navigate("ScreenTwo");

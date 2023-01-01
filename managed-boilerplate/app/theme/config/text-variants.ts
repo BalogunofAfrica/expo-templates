@@ -15,7 +15,9 @@ type TextVariants = {
 };
 
 export const textVariants: TextVariants = {
-  defaults: {},
+  defaults: {
+    color: "textColor",
+  },
   h1: {
     color: "textColor",
     fontFamily: Fonts.OutfitBold700,
