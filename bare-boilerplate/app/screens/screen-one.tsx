@@ -1,8 +1,8 @@
-import { useNavigation } from "@react-navigation/native";
 import { useTranslation } from "react-i18next";
 
 import { Screen, Text } from "@/components/base";
 import { Button } from "@/components/button";
+import { useNavigation } from "@/hooks/navigation";
 
 export function ScreenOne() {
   const { t } = useTranslation();

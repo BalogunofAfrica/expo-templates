@@ -7,7 +7,7 @@ export function ScreenTwo() {
   return (
     <Screen justifyContent="center" paddingHorizontal="m">
       <Text marginBottom="m" textAlign="center">
-        {t("screen.one.welcome")}
+        {t("screen.two.welcome")}
       </Text>
     </Screen>
   );
