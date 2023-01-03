@@ -1,6 +1,6 @@
 import "react-i18next";
 
-import english from "../i18n/languages/en.json";
+import english from "@/i18n/languages/en.json";
 
 declare module "react-i18next" {
   interface Resources {
