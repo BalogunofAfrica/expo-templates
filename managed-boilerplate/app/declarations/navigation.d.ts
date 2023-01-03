@@ -1,6 +1,5 @@
 /* eslint-disable unicorn/prevent-abbreviations */
 /* eslint-disable @typescript-eslint/no-empty-interface */
-import { StackScreenProps } from "@react-navigation/stack";
 
 import { RootNavigationRoutes } from "@/navigation/root-nav";
 
