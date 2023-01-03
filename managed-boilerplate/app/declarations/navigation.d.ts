@@ -6,9 +6,6 @@ import { RootNavigationRoutes } from "@/navigation/root-nav";
 
 export type StackParamsList = RootNavigationRoutes;
 
-export type AppScreenProps<Screen extends keyof StackParamsList> =
-  StackScreenProps<StackParamsList, Screen>;
-
 declare global {
   namespace ReactNavigation {
     interface RootParamList extends StackParamsList {}
