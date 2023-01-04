@@ -8,7 +8,7 @@ export function ToastRoot() {
   return (
     <Toast
       config={toastConfig}
-      onHide={() => appStore.actions.setWithToastOverlay(false)}
+      onHide={() => appStore.setWithToastOverlay(false)}
     />
   );
 }

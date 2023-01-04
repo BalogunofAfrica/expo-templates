@@ -1,21 +1,13 @@
 import { observable } from "@legendapp/state";
 
-type State = {
-  withToastOverlay: true | false;
-};
-type Actions = {
+type AppStore = {
   setWithToastOverlay(value: boolean): void;
+  withToastOverlay: boolean;
 };
 
-const state = observable<State>({
+export const appStore = observable<AppStore>({
+  setWithToastOverlay(value) {
+    appStore.withToastOverlay.set(value);
+  },
   withToastOverlay: false,
 });
-
-const actions: Actions = {
-  setWithToastOverlay: (value) => state.withToastOverlay.set(value),
-};
-
-export const appStore = {
-  actions,
-  state,
-};
