@@ -7,9 +7,7 @@ import { appStore } from "@/services/storage/global";
 import { Box } from "../base";
 
 export function ToastOverlay({ children }: { children: React.ReactNode }) {
-  const withToastOverlay = useSelector(() =>
-    appStore.state.withToastOverlay.get(),
-  );
+  const withToastOverlay = useSelector(() => appStore.withToastOverlay.get());
 
   return (
     <Box flex={1}>

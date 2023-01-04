@@ -12,11 +12,11 @@ type ToastShow = ToastShowParams & {
 
 export const toastMethods = {
   hide: () => {
-    appStore.actions.setWithToastOverlay(false);
+    appStore.setWithToastOverlay(false);
     Toast.hide();
   },
   show: (params: ToastShow) => {
-    if (params.withToastOverlay) appStore.actions.setWithToastOverlay(true);
+    if (params.withToastOverlay) appStore.setWithToastOverlay(true);
     Toast.show(params);
   },
 };
