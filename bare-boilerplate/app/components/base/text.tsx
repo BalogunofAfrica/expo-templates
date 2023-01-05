@@ -1,6 +1,8 @@
 import { createText } from "@shopify/restyle";
 
 import { Theme } from "@/theme";
+import { forwardRef } from "react";
+import { TFontValues } from "@/theme/config/fonts";
 
 /**
  * Custom `Text` component with type checked layout stylings and props including typography.
@@ -10,6 +12,15 @@ import { Theme } from "@/theme";
  * Fully themeable.
  * @see https://github.com/Shopify/restyle#text
  */
-export const Text = createText<Theme>();
+export const RestyleText = createText<Theme>();
 
-export type TextProps = React.ComponentProps<typeof Text>;
+export type TextProps = Omit<
+  React.ComponentProps<typeof RestyleText>,
+  "fontFamily"
+> & {
+  fontFamily?: TFontValues;
+};
+
+export const Text = forwardRef((props: TextProps, ref) => {
+  return <RestyleText ref={ref} {...props} />;
+});
