@@ -1,26 +1,29 @@
 /* eslint-disable max-classes-per-file */
 
-export class BaseError extends Error {
-  constructor(message: string) {
-    super(message);
+export interface ErrorInfo {
+  cause?: unknown;
+  message: string;
+  name?: string;
+  stack?: string;
+}
+export class BaseError extends Error implements ErrorInfo {
+  constructor(props: ErrorInfo) {
+    super(props.message);
     this.name = "Base Error";
-    this.message = message;
   }
 }
 
-type HttpErrorInfo = {
-  message: string;
+export interface AsyncErrorInfo extends ErrorInfo {
   status?: number | string;
-  name?: string;
-};
-export class HttpError extends BaseError {
+}
+export class HttpError extends BaseError implements AsyncErrorInfo {
   /**
    * http status code
    */
-  status: HttpErrorInfo["status"];
+  status: AsyncErrorInfo["status"];
 
-  constructor(props: HttpErrorInfo) {
-    super(props.message);
+  constructor(props: AsyncErrorInfo) {
+    super(props);
     this.name = props.name ?? "Http Error";
     this.status = props.status;
   }

@@ -1,8 +1,8 @@
-import { BaseError } from "../classes";
+import { AsyncErrorInfo, BaseError } from "../classes";
 import { logger } from "./logger";
 
 export const catchError = {
-  async catchAsync<T, E extends BaseError>(
+  async catchAsync<T, E extends AsyncErrorInfo>(
     promise: Promise<T>,
   ): Promise<[T, null] | [null, E]> {
     try {
