@@ -9,12 +9,9 @@ type TStyle = TextStyle & {
   color?: TColors;
   fontFamily?: TFontValues;
 };
-type Variants = "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "defaults";
-type TextVariants = {
-  [key in Variants]: TStyle;
-};
+type TextVariants = Record<string, TStyle>;
 
-export const textVariants: TextVariants = {
+export const textVariants = {
   defaults: {
     color: "textColor",
   },
@@ -67,4 +64,4 @@ export const textVariants: TextVariants = {
     lineHeight: fp(12),
     textAlign: "center",
   },
-};
+} satisfies TextVariants;
