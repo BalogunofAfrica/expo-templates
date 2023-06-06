@@ -1,5 +1,5 @@
 import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { withTranslation } from "react-i18next";
 
 import { ToastOverlay } from "@/components/toast";
@@ -12,7 +12,7 @@ export type RootNavigationRoutes = {
   ScreenTwo: undefined;
 };
 
-const Stack = createStackNavigator<RootNavigationRoutes>();
+const Stack = createNativeStackNavigator<RootNavigationRoutes>();
 
 function Navigation() {
   return (

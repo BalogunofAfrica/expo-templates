@@ -1,6 +1,6 @@
+import { ImageStyle } from "expo-image";
 import { useCallback, useState } from "react";
 import { StyleProp, StyleSheet } from "react-native";
-import { ImageStyle } from "react-native-fast-image";
 
 import { wp } from "@/constants/layout";
 import { Theme, useTheme } from "@/theme";
